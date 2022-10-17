@@ -54,3 +54,8 @@ function inkColor(){
         this.style.backgroundColor = 'black'
     }
 }
+
+function resetBoard(){
+    let divs = document.querySelectorAll('div')
+    divs.forEach((div) => div.style.backgroundColor = 'white')
+}
