@@ -13,13 +13,14 @@
 <body>
     <div class="header">
         <h1>Etch A Sketch</h1>
-        <button type="button" class="btn btn-primary">Select</button>
+        <button type="button" class="btn btn-primary" id="sizeButton">Select</button>
     </div>
+    <p id="message"></p>
     <div class="board"></div>
     <div class="footer">
-        <button type="button" class="btn btn-secondary">Secondary</button>
-        <button type="button" class="btn btn-success">Success</button>
-        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-secondary" onclick="setColor('black')">Black</button>
+        <button type="button" class="btn btn-success" onclick="setColor('random')">Random</button>
+        <button type="button" class="btn btn-danger">Reset</button>
     </div>
 </body>
 <script src="main.js"></script>
