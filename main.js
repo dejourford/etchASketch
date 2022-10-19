@@ -1,8 +1,8 @@
 let board = document.querySelector('.board')
 let selectSizeButton = document.querySelector('#sizeButton')
 let message = document.querySelector('#message')
-let squares =  document.querySelectorAll('div')
 let color = 'black'
+let click = false
 
 function getSize(){
     let userChoice = prompt('What size board would you like?')
@@ -44,14 +44,17 @@ function setColor(colorChoice){
 }
 
 function inkColor(){
-    if (color == 'random'){
-        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
-    }
-    else if (color == 'reset'){
-        this.style.backgroundColor = 'white'
-    }
-    else {
-        this.style.backgroundColor = 'black'
+    if (click){
+
+        if (color == 'random'){
+            this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
+        }
+        else if (color == 'reset'){
+            this.style.backgroundColor = 'white'
+        }
+        else {
+            this.style.backgroundColor = 'black'
+        }
     }
 }
 
@@ -59,3 +62,6 @@ function resetBoard(){
     let divs = document.querySelectorAll('div')
     divs.forEach((div) => div.style.backgroundColor = 'white')
 }
+
+
+
